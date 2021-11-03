@@ -1,0 +1,31 @@
+def playgame(maze,row,col):
+    commands=input("Enter a string of commands:")
+
+    ## Loops through the given set of commands
+    for command in commands:
+        ...
+        ### ENTER CODE HERE ###
+
+        if command == "R":
+            col= col + 1
+            if not isPositionAvailable(row,col,maze):
+                return False
+        elif commands == "L":
+            col= col - 1
+            if not isPositionAvailable(row,col,maze):
+                return False
+        elif commands == "U":
+            row= row - 1
+            if not isPositionAvailable(row,col,maze):
+                return False
+        elif commands == "D":
+            row= row + 1
+            if not isPositionAvailable(row,col,maze):
+                return False
+        if maze [row][col] == "X":
+             return True 
+
+    return False
+            
+            
+            
